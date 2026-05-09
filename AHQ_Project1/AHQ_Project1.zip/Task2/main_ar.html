@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCS3320-Webserver</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Simple style for the blue header -->
+    <style>
+        /* Make the welcome text blue */
+        .welcome-text {
+            color: blue;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <!-- Simple script to make the tab text red -->
+    <script>
+        // This runs when the page loads
+        window.onload = function() {
+            // Create a small red icon for the tab
+            var canvas = document.createElement('canvas');
+            canvas.width = 16;
+            canvas.height = 16;
+            var ctx = canvas.getContext('2d');
+            // Make the background white
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, 16, 16);
+            // Write text in red
+            ctx.fillStyle = 'red';
+            ctx.font = 'bold 16px Arial';
+            ctx.fillText('E', 1, 14);
+            
+            // Add the icon to the page
+            var link = document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = canvas.toDataURL();
+            document.head.appendChild(link);
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar rtl">
+        <div class="nav-brand">ENCS3320</div>
+        <div class="nav-links">
+            <a href="#home">الرئيسية</a>
+            <a href="#team">الفريق</a>
+            <a href="#networking">الشبكات</a>
+            <a href="#resources">المصادر</a>
+            <a href="main_en.html" class="lang-switch">English <i class="fas fa-language"></i></a>
+        </div>
+    </nav>
+    <!-- Welcome text in blue -->
+    <h1 class="welcome-text">مرحباً بكم في ENCS3320 - خادم شبكات الحاسوب</h1>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>مرحباً بكم في ENCS3320</h1>
+            <p class="hero-subtitle">مشروع خادم شبكات الحاسوب</p>
+            <a href="#team" class="cta-button">تعرف على فريقنا</a>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <h2 class="section-title">أعضاء الفريق</h2>
+        <div class="team-grid">
+            <div class="member-box">
+                <div class="member-image">
+                    <img src="husam.png" alt="حسام عطوان">
+                </div>
+                <h3>حسام عطوان</h3>
+                <span class="student-id">1222274</span>
+                <p>طالب علم حاسوب. عملت على نظام بنك باستخدام Java. هواياتي كرة القدم، القراءة، وأخبار الذكاء الاصطناعي.</p>
+                <div class="member-skills">
+                    <span>Java</span>
+                    <span>الذكاء الاصطناعي</span>
+                    <span>الشبكات</span>
+                </div>
+            </div>
+
+            <div class="member-box">
+                <div class="member-image">
+                    <img src="anwar.png" alt="أنور رضوان">
+                </div>
+                <h3>أنور رضوان</h3>
+                <span class="student-id">1222275</span>
+                <p>طالب هندسة حاسوب. عملت على تطبيق مكتبة. هواياتي السباحة، الرياضة، وتطور التكنولوجيا.</p>
+                <div class="member-skills">
+                    <span>Java</span>
+                    <span>هندسة</span>
+                    <span>تكنولوجيا</span>
+                </div>
+            </div>
+
+            <div class="member-box">
+                <div class="member-image">
+                    <img src="qusai.png" alt="قصي أبو سندس">
+                </div>
+                <h3>قصي أبو سندس</h3>
+                <span class="student-id">1221082</span>
+                <p>طالب هندسة حاسوب. عملت على تطبيق ذكاء اصطناعي. هواياتي كرة القدم، مشاهدة المباريات وتصميم المواقع.</p>
+                <div class="member-skills">
+                    <span>الذكاء الاصطناعي</span>
+                    <span>تصميم الويب</span>
+                    <span>هندسة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="networking" class="networking-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">أمن الشبكات: حماية البنية التحتية الرقمية</h2>
+            <div class="network-content">
+                <div class="network-text">
+                    <p class="network-description">أمن الشبكات هو ممارسة حماية شبكات الكمبيوتر ومكوناتها من التهديدات السيبرانية والوصول غير المصرح به واختراق البيانات. مع زيادة الاعتماد على الاتصال الرقمي، أصبح تأمين الشبكات أكثر أهمية من أي وقت مضى.</p>
+                    
+                    <div class="key-points">
+                        <h3><i class="fas fa-shield-alt"></i> المفاهيم الرئيسية في أمن الشبكات</h3>
+                        <h4><i class="fas fa-bug"></i> أنواع التهديدات السيبرانية</h4>
+                        <ul>
+                            <li><i class="fas fa-virus"></i> <strong>البرامج الضارة</strong> (الفيروسات والديدان وأحصنة طروادة) – تصيب الأنظمة وتنشر الشفرات الخبيثة</li>
+                            <li><i class="fas fa-ban"></i> <strong>هجمات حجب الخدمة</strong> – تحميل زائد على الأنظمة يجعلها غير متاحة</li>
+                            <li><i class="fas fa-user-secret"></i> <strong>هجمات الوسيط</strong> – اعتراض وتغيير الاتصالات</li>
+                            <li><i class="fas fa-fish"></i> <strong>التصيد الاحتيالي</strong> – خداع المستخدمين لكشف معلومات حساسة</li>
+                            <li><i class="fas fa-network-wired"></i> <strong>التقاط الحزم</strong> – مراقبة حركة المرور لسرقة البيانات</li>
+                        </ul>
+
+                        <h4><i class="fas fa-shield-virus"></i> إجراءات وإستراتيجيات الأمن</h4>
+                        <ul>
+                            <li><i class="fas fa-fire-alt"></i> <strong>جدران الحماية</strong> – منع الوصول غير المصرح به</li>
+                            <li><i class="fas fa-lock"></i> <strong>التشفير</strong> – ترميز البيانات للحماية</li>
+                            <li><i class="fas fa-key"></i> <strong>التحكم في الوصول</strong> – تقييد الوصول إلى الموارد</li>
+                            <li><i class="fas fa-search"></i> <strong>أنظمة كشف/منع التسلل</strong> – مراقبة وإيقاف التهديدات</li>
+                        </ul>
+
+                        <h4><i class="fas fa-chart-line"></i> بروتوكولات الأمان</h4>
+                        <ol>
+                            <li><i class="fas fa-lock"></i> SSL/TLS – تأمين حركة الويب</li>
+                            <li><i class="fas fa-shield-alt"></i> IPSec – حماية اتصالات IP</li>
+                            <li><i class="fas fa-wifi"></i> 802.1X – مصادقة الشبكات اللاسلكية</li>
+                        </ol>
+                    </div>
+
+                    <div class="network-challenges">
+                        <h4><i class="fas fa-exclamation-triangle"></i> التحديات والاتجاهات المستقبلية</h4>
+                        <ul class="challenges-list">
+                            <li><i class="fas fa-robot"></i> الأمن المدعوم بالذكاء الاصطناعي</li>
+                            <li><i class="fas fa-user-lock"></i> هندسة الثقة الصفرية</li>
+                            <li><i class="fas fa-atom"></i> التشفير الكمي</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="network-image">
+                    <img src="layered-security-approach-2.webp" alt="طبقات الأمن الشبكي" class="security-image">
+                    <p class="image-caption">نهج الأمن متعدد الطبقات في الشبكات الحديثة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="resources-section">
+        <h2 class="section-title">المصادر</h2>
+        <div class="resources-grid">
+            <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" class="resource-card">
+                <i class="fas fa-book"></i>
+                <h3>موقع الكتاب</h3>
+                <p>الوصول إلى مواد ومصادر المساق</p>
+            </a>
+            <a href="https://www.birzeit.edu/" class="resource-card">
+                <i class="fas fa-university"></i>
+                <h3>جامعة بيرزيت</h3>
+                <p>زيارة موقع الجامعة</p>
+            </a>
+            <a href="mySite_1222274_ar.html" class="resource-card">
+                <i class="fas fa-photo-video"></i>
+                <h3>مركز الوسائط</h3>
+                <p>طلب وعرض ملفات الوسائط</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 ENCS3320 - شبكات الحاسوب. جميع الحقوق محفوظة.</p>
+    </footer>
+</body>
+</html>

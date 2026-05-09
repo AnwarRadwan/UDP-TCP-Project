@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب وسائط - ENCS3320</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .media-form-container {
+            max-width: 600px;
+            margin: 120px auto 40px;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .media-form-container h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: right;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.1);
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .language-switch {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .language-switch:hover {
+            color: var(--primary-color);
+        }
+
+        .language-switch i {
+            margin-right: 0.5rem;
+        }
+
+        .example-text {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        .examples-list {
+            margin-top: 15px;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: right;
+        }
+        
+        .examples-list h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .examples-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            columns: 2;
+        }
+        
+        .examples-list li {
+            margin-bottom: 8px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .examples-list i {
+            margin-left: 5px;
+            color: var(--accent-color);
+        }
+
+        /* RTL specific styles */
+        .navbar .nav-links {
+            flex-direction: row-reverse;
+        }
+
+        .nav-brand {
+            order: 2;
+        }
+
+        .nav-links {
+            order: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">ENCS3320</div>
+        <div class="nav-links">
+            <a href="main_ar.html">الرئيسية</a>
+            <a href="mySite_1222274_en.html" class="lang-switch">English <i class="fas fa-language"></i></a>
+        </div>
+    </nav>
+
+    <div class="media-form-container">
+        <h1><i class="fas fa-photo-video"></i> طلب وسائط الشبكات</h1>
+        <form action="/handle_request" method="get">
+            <div class="form-group">
+                <label for="filename">طلب وسائط موضوع الشبكات:</label>
+                <input type="text" id="filename" name="filename" class="form-control" required 
+                       placeholder="أدخل اسم الملف (مثال: tcp_handshake.jpg)">
+                <div class="example-text">
+                    أدخل اسم الملف مع الامتداد (.jpg, .png, .mp4)
+                </div>
+                
+            </div>
+            <button type="submit" class="submit-btn">
+                <i class="fas fa-search"></i> بحث عن وسائط الشبكات
+            </button>
+        </form>
+    </div>
+</body>
+</html>

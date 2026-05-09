@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENCS3320-Webserver</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Simple style for the blue header -->
+    <style>
+        /* Make the welcome text blue */
+        .welcome-text {
+            color: blue;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <!-- Simple script to make the tab text red -->
+    <script>
+        // This runs when the page loads
+        window.onload = function() {
+            // Create a small red icon for the tab
+            var canvas = document.createElement('canvas');
+            canvas.width = 16;
+            canvas.height = 16;
+            var ctx = canvas.getContext('2d');
+            // Make the background white
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, 16, 16);
+            // Write text in red
+            ctx.fillStyle = 'red';
+            ctx.font = 'bold 16px Arial';
+            ctx.fillText('E', 1, 14);
+            
+            // Add the icon to the page
+            var link = document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = canvas.toDataURL();
+            document.head.appendChild(link);
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">ENCS3320</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#team">Team</a>
+            <a href="#networking">Networking</a>
+            <a href="#resources">Resources</a>
+            <a href="main_ar.html" class="lang-switch">عربي <i class="fas fa-language"></i></a>
+        </div>
+    </nav>
+    <!-- Welcome text in blue -->
+    <h1 class="welcome-text">Welcome to ENCS3320 - Computer Networks Webserver</h1>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to ENCS3320</h1>
+            <p class="hero-subtitle">Computer Networks Webserver Project</p>
+            <a href="#team" class="cta-button">Meet Our Team</a>
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <h2 class="section-title">Our Team Members</h2>
+        <div class="team-grid">
+            <div class="member-box">
+                <div class="member-image">
+                    <img src="husam.png" alt="Husam Atwan">
+                </div>
+                <h3>Husam Atwan</h3>
+                <span class="student-id">1222274</span>
+                <p>Computer Science student. Projects: Banking System in Java. Hobbies: Football, reading, AI news.</p>
+                <div class="member-skills">
+                    <span>Java</span>
+                    <span>AI</span>
+                    <span>Networks</span>
+                </div>
+            </div>
+
+            <div class="member-box">
+                <div class="member-image">
+                    <img src="anwar.png" alt="Anwar Atawneh">
+                </div>
+                <h3>Anwar Atawneh</h3>
+                <span class="student-id">1222275</span>
+                <p>Computer Engineering student. Projects: Library App in Java. Hobbies: Swimming, tech news, sports.</p>
+                <div class="member-skills">
+                    <span>Java</span>
+                    <span>Engineering</span>
+                    <span>Tech</span>
+                </div>
+            </div>
+
+            <div class="member-box">
+                <div class="member-image">
+                    <img src="qusai.png" alt="Quasi Abu Sondos">
+                </div>
+                <h3>Quasi Abu Sondos</h3>
+                <span class="student-id">1221082</span>
+                <p>Computer Engineering student. Projects: AI App. Hobbies: Football, web design, matches.</p>
+                <div class="member-skills">
+                    <span>AI</span>
+                    <span>Web Design</span>
+                    <span>Engineering</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="networking" class="networking-section">
+        <div class="content-wrapper">
+            <h2 class="section-title">Network Security: Protecting Digital Infrastructure</h2>
+            <div class="network-content">
+                <div class="network-text">
+                    <p class="network-description">Network security is the practice of safeguarding computer networks and their components from cyber threats, unauthorized access, and data breaches. With the increasing reliance on digital communication, securing networks is more critical than ever.</p>
+                    
+                    <div class="key-points">
+                        <h3><i class="fas fa-shield-alt"></i> Key Concepts in Network Security</h3>
+                        <h4><i class="fas fa-bug"></i> Types of Cyber Threats</h4>
+                        <ul>
+                            <li><i class="fas fa-virus"></i> <strong>Malware</strong> (Viruses, Worms, Trojans) – Infects systems and spreads malicious code</li>
+                            <li><i class="fas fa-ban"></i> <strong>Denial of Service (DoS)</strong> – Overloads systems, making them unavailable</li>
+                            <li><i class="fas fa-user-secret"></i> <strong>Man-in-the-Middle</strong> – Intercepts and alters communication</li>
+                            <li><i class="fas fa-fish"></i> <strong>Phishing</strong> – Tricks users into revealing sensitive information</li>
+                            <li><i class="fas fa-network-wired"></i> <strong>Packet Sniffing</strong> – Monitors traffic to steal data</li>
+                        </ul>
+
+                        <h4><i class="fas fa-shield-virus"></i> Security Measures & Defense Strategies</h4>
+                        <ul>
+                            <li><i class="fas fa-fire-alt"></i> <strong>Firewalls</strong> – Block unauthorized access</li>
+                            <li><i class="fas fa-lock"></i> <strong>Encryption</strong> – Encodes data for protection</li>
+                            <li><i class="fas fa-key"></i> <strong>Access Control</strong> – Limits resource access</li>
+                            <li><i class="fas fa-search"></i> <strong>IDS/IPS</strong> – Monitors and stops threats</li>
+                        </ul>
+
+                        <h4><i class="fas fa-chart-line"></i> Security Protocols</h4>
+                        <ol>
+                            <li><i class="fas fa-lock"></i> SSL/TLS – Secures web traffic</li>
+                            <li><i class="fas fa-shield-alt"></i> IPSec – Protects IP communications</li>
+                            <li><i class="fas fa-wifi"></i> 802.1X – Wireless network authentication</li>
+                        </ol>
+                    </div>
+
+                    <div class="network-challenges">
+                        <h4><i class="fas fa-exclamation-triangle"></i> Future Challenges & Trends</h4>
+                        <ul class="challenges-list">
+                            <li><i class="fas fa-robot"></i> AI-powered Security</li>
+                            <li><i class="fas fa-user-lock"></i> Zero Trust Architecture</li>
+                            <li><i class="fas fa-atom"></i> Quantum Encryption</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="network-image">
+                    <img src="layered-security-approach-2.webp" alt="Network Security Layers" class="security-image">
+                    <p class="image-caption">Layered Security Approach in Modern Networks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resources" class="resources-section">
+        <h2 class="section-title">Resources</h2>
+        <div class="resources-grid">
+            <a href="https://gaia.cs.umass.edu/kurose_ross/index.php" class="resource-card">
+                <i class="fas fa-book"></i>
+                <h3>Textbook Website</h3>
+                <p>Access course materials and resources</p>
+            </a>
+            <a href="https://www.birzeit.edu/" class="resource-card">
+                <i class="fas fa-university"></i>
+                <h3>Birzeit University</h3>
+                <p>Visit our university website</p>
+            </a>
+            <a href="mySite_1222274_en.html" class="resource-card">
+                <i class="fas fa-photo-video"></i>
+                <h3>Media Center</h3>
+                <p>Request and view media files</p>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 ENCS3320 - Computer Networks. All rights reserved.</p>
+    </footer>
+</body>
+</html>
